@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №1 — Рівень 7-9 балів</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            line-height: 1.6;
+        }
+        .task-block {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        /* Стилі для завдання 1 */
+        .even {
+            color: green;
+            font-weight: bold;
+        }
+        .odd {
+            color: red;
+            font-weight: bold;
+        }
+        /* Стилі для блоку з паролем (завдання 2) */
+        .password-box {
+            font-family: monospace;
+            font-size: 1.2rem;
+            background: #eef;
+            display: inline-block;
+            padding: 5px 10px;
+            border: 1px dashed #77b;
+            border-radius: 4px;
+        }
+        button {
+            padding: 8px 14px;
+            cursor: pointer;
+            border-radius: 4px;
+            border: 1px solid #888;
+            background: #fff;
+            transition: 0.2s;
+        }
+        button:hover {
+            background: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Лабораторна робота №1 (7–9 балів)</h1>
+
+    <!-- Блок для Завдання 1 -->
+    <div class="task-block">
+        <h2>Завдання 1: Парне/непарне число</h2>
+        <div id="task1-output"></div>
+    </div>
+
+    <!-- Блок для Завдання 2 -->
+    <div class="task-block">
+        <h2>Завдання 2: Генерація пароля</h2>
+        <div id="password-container"></div>
+    </div>
+
+    <!-- Блок для Завдання 3 -->
+    <div class="task-block">
+        <h2>Завдання 3: Розрахунок середнього балу</h2>
+        <p>Натисніть кнопку, щоб ввести 3 оцінки:</p>
+        <button id="calc-avg-btn">Ввести оцінки</button>
+        <div id="task3-container" style="margin-top: 10px;"></div>
+    </div>
+
+    <!-- Блок для Завдання 4 -->
+    <div class="task-block">
+        <h2>Завдання 4: Список студентів групи</h2>
+        <p>Натисніть кнопку, щоб розпочати введення списку студентів:</p>
+        <button id="add-students-btn">Ввести студентів</button>
+        <ol id="students-list" style="margin-top: 10px;"></ol>
+    </div>
+
+    <script type="module">
+        // ==========================================
+        // ВКАЖІТЬ ТУТ ВАШІ ДАНІ:
+        const MY_NAME = "Олександр"; // Ваше ім'я
+        const MY_NUMBER = 7;         // Ваш номер у журналі
+        // ==========================================
+
+        // --- Завдання 1 ---
+        // Функція перевіряє парність числа та виводить кольоровий абзац
+        const checkEvenOdd = (number) => {
+            const container = document.getElementById('task1-output');
+            const p = document.createElement('p');
+
+            if (number % 2 === 0) {
+                p.textContent = `Число ${number} є парним.`;
+                p.className = 'even'; // Зелений колір
+            } else {
+                p.textContent = `Число ${number} є непарним.`;
+                p.className = 'odd';  // Червоний колір
+            }
+
+            container.appendChild(p);
+        };
+
+        // --- Завдання 2 ---
+        // Функція створює пароль (перші 3 літери імені + номер * 2) і виводить у div
+        const generatePassword = (name, number) => {
+            const container = document.getElementById('password-container');
+            const passDiv = document.createElement('div');
+            passDiv.className = 'password-box';
+
+            // Беремо перші 3 літери та обчислюємо number * 2
+            const prefix = name.slice(0, 3);
+            const numPart = number * 2;
+            const password = `${prefix}${numPart}`;
+
+            passDiv.textContent = `Згенерований пароль: ${password}`;
+            container.appendChild(passDiv);
+        };
+
+        // --- Завдання 3 ---
+        // Функція запитує 3 оцінки, динамічно створює div з id = номеру в журналі
+        // та виводить туди середнє значення
+        const calculateAverage = (studentNumber) => {
+            const score1 = parseFloat(prompt("Введіть першу оцінку:"));
+            const score2 = parseFloat(prompt("Введіть другу оцінку:"));
+            const score3 = parseFloat(prompt("Введіть третю оцінку:"));
+
+            // Перевірка на коректність введення
+            if (isNaN(score1) || isNaN(score2) || isNaN(score3)) {
+                alert("Будь ласка, введіть коректні числові оцінки!");
+                return;
+            }
+
+            const average = ((score1 + score2 + score3) / 3).toFixed(2);
+
+            const container = document.getElementById('task3-container');
+            
+            // Якщо блок вже існує з минулого кліку — знаходимо його, або створюємо новий
+            let targetDiv = document.getElementById(`id-${studentNumber}`);
+            if (!targetDiv) {
+                targetDiv = document.createElement('div');
+                targetDiv.id = `id-${studentNumber}`; // id дорівнює номеру в журналі
+                container.appendChild(targetDiv);
+            }
+
+            targetDiv.textContent = `Середній бал: ${average}`;
+        };
+
+        // --- Завдання 4 ---
+        // Скрипт запитує кількість студентів та їх ПІБ, виводячи їх одразу після кожного введення
+        const inputStudents = () => {
+            const list = document.getElementById('students-list');
+            list.innerHTML = ''; // Очищуємо попередній список
+
+            const countInput = prompt("Введіть кількість студентів у групі:");
+            const count = parseInt(countInput, 10);
+
+            if (isNaN(count) || count <= 0) {
+                alert("Введено невірну кількість!");
+                return;
+            }
+
+            for (let i = 1; i <= count; i++) {
+                const fullName = prompt(`Введіть прізвище та ім'я студента №${i}:`);
+                
+                const li = document.createElement('li');
+                // Якщо користувач натиснув "Відміна" або залишив порожнім
+                li.textContent = fullName ? fullName : `[Не вказано]`;
+                
+                // Відображаємо у вікні браузера одразу після введення
+                list.appendChild(li);
+            }
+        };
+
+        // --- Ініціалізація та виклики ---
+        // Завдання 1 та 2 виконуються одразу при завантаженні сторінки
+        checkEvenOdd(MY_NUMBER);
+        generatePassword(MY_NAME, MY_NUMBER);
+
+        // Для завдань 3 та 4 вішаємо виклики на кнопки, щоб prompt не блокував екран автоматично
+        document.getElementById('calc-avg-btn').addEventListener('click', () => calculateAverage(MY_NUMBER));
+        document.getElementById('add-students-btn').addEventListener('click', inputStudents);
+    </script>
+</body>
+</html>
