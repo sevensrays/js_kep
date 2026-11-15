@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f3f4f6;
+    color: #1f2937;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 24px 16px;
+    line-height: 1.5;
+}
+
+section {
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 20px 24px;
+}
+
+h2 {
+    font-size: 19px;
+    margin: 0 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+h3 {
+    font-size: 16px;
+    margin: 0 0 8px;
+}
+
+.task-block {
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+input[type="number"] {
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 1px solid #9ca3af;
+    border-radius: 6px;
+    width: 150px;
+}
+
+button {
+    background: #2f5d8a;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 9px 16px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #244a70;
+}
+
+#loader {
+    margin-top: 14px;
+    padding: 10px 14px;
+    background: #fff8e1;
+    border-left: 3px solid #f59e0b;
+    color: #92400e;
+    font-weight: 600;
+}
+
+.message {
+    margin-top: 14px;
+    padding: 10px 14px;
+    background: #f3f4f6;
+    border-left: 3px solid #2f5d8a;
+}
+
+.message.ok {
+    border-left-color: #2e7d32;
+    background: #e8f3e8;
+}
+
+.message.error {
+    border-left-color: #c62828;
+    background: #fbeaea;
+}
