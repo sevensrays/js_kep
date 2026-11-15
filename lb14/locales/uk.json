@@ -1,0 +1,115 @@
+{
+  "greeting": "Привіт",
+  "farewell": "До побачення",
+  "title": "Магазин моніторів — ОБОВ'ЯЗКОВО ДОДАЙТЕ СВОЄ ЗАМОВЛЕННЯ",
+  "choose_lang_title": "Оберіть мову / Choose language",
+  "choose_lang_desc": "Будь ласка, оберіть мову для перегляду каталогу:",
+  "currency": "ГРН",
+  "btn_add_to_cart": "У КОРЗИНУ",
+  "btn_coming_soon": "НЕЗАБАРОМ У ПРОДАЖІ",
+  "empty_cart_msg": "Корзина пуста",
+  "btn_ok": "Зрозуміло",
+  "enter_qty_msg": "Вкажіть кількість:",
+  "btn_confirm_add": "Додати до корзини",
+  "btn_cancel": "Скасувати",
+  "added_msg": "Товар додано",
+  "btn_go_to_cart": "Перейти у корзину",
+  "btn_continue": "Повернутись до покупок",
+  "invalid_qty_alert": "Введіть коректну кількість (від 1)",
+  "cart_heading": "Ви обрали:",
+  "th_num": "№",
+  "th_name": "Назва товару",
+  "th_price": "Ціна за од.",
+  "th_qty": "К-сть:",
+  "th_sum": "Сума:",
+  "change_qty": "(змінити к-сть)",
+  "delete_item": "(видалити)",
+  "total_label": "Разом до оплати:",
+  "pay_link": "Оплатити",
+  "back_to_shop": "Повернутись до покупок",
+  "pay_success": "Замовлення успішно оплачено! Дякуємо за покупку.",
+  "prompt_new_qty": "Вкажіть нову кількість для",
+  "products": [
+    {
+      "id": 1,
+      "name": "ASUS ROG Swift 27\" OLED",
+      "category": "OLED Геймінг",
+      "price": 34990,
+      "oldPrice": null,
+      "description": "Ігровий OLED-монітор 240 Гц з миттєвим відгуком 0.03 мс",
+      "image": "monitor-oled.jpg",
+      "badge": {
+        "text": "НОВИНКА",
+        "type": "new"
+      },
+      "available": false
+    },
+    {
+      "id": 2,
+      "name": "LG UltraGear 27\" Fast IPS",
+      "category": "Кіберспорт IPS",
+      "price": 10990,
+      "oldPrice": 12500,
+      "description": "Швидка матриця Fast IPS 180 Гц з підтримкою G-Sync",
+      "image": "monitor-ips.jpg",
+      "badge": null,
+      "available": true
+    },
+    {
+      "id": 3,
+      "name": "Samsung Odyssey G5 27\" VA",
+      "category": "Вигнутий екран",
+      "price": 8490,
+      "oldPrice": null,
+      "description": "Вигнутий QHD-монітор 165 Гц з глибоким контрастом",
+      "image": "monitor-va.jpg",
+      "badge": {
+        "text": "ХІТ ПРОДАЖІВ",
+        "type": "hit"
+      },
+      "available": true
+    },
+    {
+      "id": 4,
+      "name": "Dell UltraSharp 27\" 4K UHD",
+      "category": "Для роботи 4K",
+      "price": 16500,
+      "oldPrice": null,
+      "description": "Професійний 4K-монітор з високою точністю кольорів",
+      "image": "monitor-4k.jpg",
+      "badge": {
+        "text": "ХІТ ПРОДАЖІВ",
+        "type": "hit"
+      },
+      "available": true
+    },
+    {
+      "id": 5,
+      "name": "MSI Optix MAG342CQR 34\"",
+      "category": "Ультраширокі 21:9",
+      "price": 15990,
+      "oldPrice": 17490,
+      "description": "Ультраширокий вигнутий UWQHD-монітор 144 Гц для занурення",
+      "image": "monitor-ultrawide.jpg",
+      "badge": {
+        "text": "НОВИНКА",
+        "type": "new"
+      },
+      "available": true
+    },
+    {
+      "id": 6,
+      "name": "BenQ ZOWIE XL2566K 24.5\"",
+      "category": "Кіберспорт 360Hz",
+      "price": 24990,
+      "oldPrice": null,
+      "description": "Турнірний монітор 360 Гц з технологією DyAc+ для шутерів",
+      "image": "monitor-esports.jpg",
+      "badge": {
+        "text": "ХІТ ПРОДАЖІВ",
+        "type": "hit"
+      },
+      "available": true
+    }
+  ]
+}

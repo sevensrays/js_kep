@@ -1,0 +1,115 @@
+{
+  "greeting": "Hello",
+  "farewell": "Goodbye",
+  "title": "Monitor Store — PLACE YOUR ORDER TODAY",
+  "choose_lang_title": "Choose language / Оберіть мову",
+  "choose_lang_desc": "Please select your preferred language to view the catalog:",
+  "currency": "UAH",
+  "btn_add_to_cart": "ADD TO CART",
+  "btn_coming_soon": "COMING SOON",
+  "empty_cart_msg": "Your cart is empty",
+  "btn_ok": "OK",
+  "enter_qty_msg": "Enter quantity:",
+  "btn_confirm_add": "Add to cart",
+  "btn_cancel": "Cancel",
+  "added_msg": "Product added to cart",
+  "btn_go_to_cart": "Go to cart",
+  "btn_continue": "Continue shopping",
+  "invalid_qty_alert": "Please enter a valid quantity (1 or more)",
+  "cart_heading": "You selected:",
+  "th_num": "#",
+  "th_name": "Product Name",
+  "th_price": "Unit Price",
+  "th_qty": "Qty:",
+  "th_sum": "Total:",
+  "change_qty": "(change qty)",
+  "delete_item": "(remove)",
+  "total_label": "Total to pay:",
+  "pay_link": "Checkout",
+  "back_to_shop": "Continue shopping",
+  "pay_success": "Order paid successfully! Thank you for your purchase.",
+  "prompt_new_qty": "Enter new quantity for",
+  "products": [
+    {
+      "id": 1,
+      "name": "ASUS ROG Swift 27\" OLED",
+      "category": "OLED Gaming",
+      "price": 34990,
+      "oldPrice": null,
+      "description": "240Hz OLED gaming monitor with 0.03ms response time",
+      "image": "monitor-oled.jpg",
+      "badge": {
+        "text": "NEW",
+        "type": "new"
+      },
+      "available": false
+    },
+    {
+      "id": 2,
+      "name": "LG UltraGear 27\" Fast IPS",
+      "category": "Esports IPS",
+      "price": 10990,
+      "oldPrice": 12500,
+      "description": "Fast IPS 180Hz panel with NVIDIA G-Sync support",
+      "image": "monitor-ips.jpg",
+      "badge": null,
+      "available": true
+    },
+    {
+      "id": 3,
+      "name": "Samsung Odyssey G5 27\" VA",
+      "category": "Curved Display",
+      "price": 8490,
+      "oldPrice": null,
+      "description": "Curved QHD 165Hz monitor with deep static contrast",
+      "image": "monitor-va.jpg",
+      "badge": {
+        "text": "BESTSELLER",
+        "type": "hit"
+      },
+      "available": true
+    },
+    {
+      "id": 4,
+      "name": "Dell UltraSharp 27\" 4K UHD",
+      "category": "4K Professional",
+      "price": 16500,
+      "oldPrice": null,
+      "description": "Professional 4K UHD monitor with factory color calibration",
+      "image": "monitor-4k.jpg",
+      "badge": {
+        "text": "BESTSELLER",
+        "type": "hit"
+      },
+      "available": true
+    },
+    {
+      "id": 5,
+      "name": "MSI Optix MAG342CQR 34\"",
+      "category": "UltraWide 21:9",
+      "price": 15990,
+      "oldPrice": 17490,
+      "description": "UltraWide curved UWQHD 144Hz monitor for immersion",
+      "image": "monitor-ultrawide.jpg",
+      "badge": {
+        "text": "NEW",
+        "type": "new"
+      },
+      "available": true
+    },
+    {
+      "id": 6,
+      "name": "BenQ ZOWIE XL2566K 24.5\"",
+      "category": "Esports 360Hz",
+      "price": 24990,
+      "oldPrice": null,
+      "description": "Tournament 360Hz monitor with DyAc+ technology",
+      "image": "monitor-esports.jpg",
+      "badge": {
+        "text": "BESTSELLER",
+        "type": "hit"
+      },
+      "available": true
+    }
+  ]
+}
